@@ -16,8 +16,8 @@
     <!-- Style Sheet and Google's MDL -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-indigo.min.css"> 
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Calculating Salary Program, with JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+      <title>Calculating Salary Program, with JavaScript</title>
   </head>
   <body>
     <!-- To use Google's MDL + Path to JS File -->
@@ -27,92 +27,53 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Calculating Your Canadian Salary, with JavaScript</span>
+          <span class="mdl-layout-title">Calculating Your Ontarian Salary, with JavaScript</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <img src="./images/peri_area_triangle.png" alt="Perimeter and Area of a Triangle" width="75%" height="auto">
-            </th>
-            <th>
-              <h2>Formulas</h2>
-              <h3>A = B x H / 2</h3>
-              <h3>P = A</h3>
-            </th>
-          </tr>
-        </table>
-        <!-- Simple Textfield for Side A -->
+        <!-- Numeric Textfield for # of hours worked -->
         <form action="#">
-          <p>Side A</p>
+          <p>Number of Hours Worked:</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="side-a-triangle"
-            />
-            <label class="mdl-textfield__label" for="side-a-triangle">Side A ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
+              type="number"
+              id="hours"
+              />
+            <label class="mdl-textfield__label" for="hours">Number of Hours ...</label>
           </div>
         </form>
-        <!-- Numeric Textfield for Side B -->
+        <!-- Numeric Textfield for hourly pay $$ -->
         <form action="#">
-          <p>Side B</p>
+          <p>Hourly Pay: $</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="side-b-triangle"
-            />
-            <label class="mdl-textfield__label" for="side-b-triangle">Side B ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <!-- Numeric Textfield for Base -->
-        <form action="#">
-          <p>Base</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="base-triangle"
-            />
-            <label class="mdl-textfield__label" for="base-triangle">Base ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <!-- Numeric Textfield for Height -->
-        <form action="#">
-          <p>Height</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="height-triangle"
-            />
-            <label class="mdl-textfield__label" for="height-triangle">Height ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
+              type="number"
+              id="hourly_pay"
+              />
+            <label class="mdl-textfield__label" for="hourly_pay">Hourly Pay ...</label>
           </div>
         </form>
         <!-- Raised button with ripple -->
+        <br><br><br>
+        <center>
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
+          onclick="calculatePay()"
+          >
           Calculate
         </button>
+        </center>
         <br />
         <p>
-          <div id="answers">
-            <div id="area"></div>
-            <div id="perimeter"></div>
-          </div>
-        </p>
+          <!-- Display of information -->
+        <div id="display_results">
+          <div id="total_pay"></div>
+          <div id="tax"></div>
+          <div id="profit"></div>
+        </div>
+      </p>
       </main>
     </div>
   </body>
