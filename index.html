@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- ICS2O Programming Unit2-04-HTML-Area-Triangle -->
+<html>
+  <head>
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta name="description" content="Calculating Salary with JS">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Shyla Oommen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon[1].png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32[1].png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16[1].png">
+    <link rel="manifest" href="./fav/site[1].webmanifest">
+    <!-- Style Sheet and Google's MDL -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-indigo.min.css"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculating Salary Program, with JavaScript</title>
+  </head>
+  <body>
+    <!-- To use Google's MDL + Path to JS File -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Calculating Your Canadian Salary, with JavaScript</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img src="./images/peri_area_triangle.png" alt="Perimeter and Area of a Triangle" width="75%" height="auto">
+            </th>
+            <th>
+              <h2>Formulas</h2>
+              <h3>A = B x H / 2</h3>
+              <h3>P = A</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield for Side A -->
+        <form action="#">
+          <p>Side A</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="side-a-triangle"
+            />
+            <label class="mdl-textfield__label" for="side-a-triangle">Side A ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield for Side B -->
+        <form action="#">
+          <p>Side B</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="side-b-triangle"
+            />
+            <label class="mdl-textfield__label" for="side-b-triangle">Side B ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield for Base -->
+        <form action="#">
+          <p>Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="base-triangle"
+            />
+            <label class="mdl-textfield__label" for="base-triangle">Base ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield for Height -->
+        <form action="#">
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-triangle"
+            />
+            <label class="mdl-textfield__label" for="height-triangle">Height ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <p>
+          <div id="answers">
+            <div id="area"></div>
+            <div id="perimeter"></div>
+          </div>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
