@@ -12,16 +12,16 @@ const TAX = 0.1805
 // This function calculates the pay and deducts taxes
 
 function calculatePay () {
-  // User Input
+  // gets hours and hourly pay from user
   let hours = document.getElementById('hours').value
   let hourly_pay = document.getElementById('hourly_pay').value
 
-  // To calculate the pay and the tax
+  // To calculate the salary, the tax, and total earned
   let total_pay = hours * hourly_pay
   let tax = TAX * total_pay
   let profit = total_pay - tax
 
-  // display the results
+  // display the salary, tax, and profit (total earned)
   document.getElementById('total_pay').innerHTML = "Your pay will be $" + total_pay.toFixed(2)
   document.getElementById('tax').innerHTML = "The government will take $" + tax.toFixed(2)
   document.getElementById('profit').innerHTML = "With the tax deduction, you come to a total of $" + profit.toFixed(2)
